@@ -1,0 +1,44 @@
+<style>
+  body{
+    background-image: linear-gradient(to top, #b929ca, #b257ad, #8d28a2, #c455ea, #4f4f95);
+    height: 130vh;
+  }
+  .parent-container{
+    background-image: linear-gradient(to top, #b929ca, #b257ad, #8d28a2, #c455ea, #4f4f95);
+    box-shadow: 8px 4px 4px 2px palegoldenrod ;
+    border-radius: 25px;
+    
+  }
+  .parent-container:hover{
+    box-shadow: inset 1px 1px 2px 3px beige;
+  }
+ 
+  h1{
+    color: wheat;
+  }
+  .clr{
+    color: wheat;
+  }
+</style>
+
+<header class="parent-container">
+  <nav class="navbar parent-container">
+    <div class="container-fluid">
+      <a class="navbar-brand clr" href="/">Placement Cell</a>
+      <% if(locals.user) { %>
+      <a class=" clr navbar-brand" href="/profile"
+        >Hello <%= locals.user.username%></a
+      >
+      <%}%>
+
+      <form class="clr d-flex">
+        <a class="clr navbar-brand" href="/dashboard">Dashboard</a>
+        <a class="clr navbar-brand" href="/student/add-student">Add New Student</a>
+        <a class="clr navbar-brand" href="/interview/add-interview">Add Interview</a
+        >
+        <a class="clr navbar-brand" href="/download">Download</a>
+        <a class="clr navbar-brand" href="/sign-out">Sign Out</a>
+      </form>
+    </div>
+  </nav>
+</header>
